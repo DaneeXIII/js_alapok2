@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Alapok</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+
+<div class="p-3 mb-2 bg-dark text-white" id="div">
+
+<h1>Mire képes a JavaScript?</h1>
+<div class="div2 p-3 mb-2 bg-dark text-white">
+<h5 id="valtoztat">Meg tudja változtani egyes elemek kinézetét.</h5>
+<button type="button" onclick="document.getElementById('valtoztat').style.fontSize='35px'" class="btn btn-primary">Betűméret</button>
+<button type="button" onclick="document.getElementById('valtoztat').style.backgroundColor='orange'" class="btn btn-primary">Cím háttér</button>
+<button type="button" onclick="document.getElementById('valtoztat').style.fontFamily='Courier New'" class="btn btn-primary">Betűtípus</button>
+<button type="button" onclick="document.getElementById('valtoztat').style.opacity='0.4'" class="btn btn-primary">Átlátszóság</button>
+</div>
+
+<hr>
+
+<div class="div2 p-3 mb-2 bg-dark text-white">
+<h5>Elemeket jeleníthet meg.</h5>
+<button type="button" class="btn btn-primary"
+onclick="document.getElementById('ido').innerHTML = Date()">
+Kattints az idő és dátum megjelenítéséhez!</button>
+<p id="ido"></p>
+</div>
+
+<hr>
+
+<div class="div2 p-3 mb-2 bg-dark text-white">
+<h5>Meg tudja változtatni egyes attribútumok értékét.</h5>
+<p>Ebben a példában egy kép forrását fogja megváltoztatni (Így változtatva a képet is, értelemszerűen.)</p>
+<button type="button" class="btn btn-primary btn-sm" onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Világítás be!</button>
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+<button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Világítás ki!</button>
+</div>
+
+</body>
+</html>
