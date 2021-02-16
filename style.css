@@ -1,8 +1,30 @@
+body {
+    background-image: url(light_bg_sky.gif);
+}
+
 #div {
     text-align: center;
-    border: rgb(23, 131, 255) 20px solid;
+    border: rgb(0, 52, 112) 20px solid;
+    width: fit-content;
+    margin: auto;
 }
 
 .div2 {
     border: rgb(255, 255, 255) 10px solid;
 }
+
+body {
+    padding: 25px;
+    background-color: white;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+  }
+  
+.dark-mode{
+    background-image: url(dark_bg_stars.gif);
+    color: rgb(0, 0, 0);
+  }
+
+#div4 #vilagitas{
+    background-color: rgb(255, 237, 164);
+  }

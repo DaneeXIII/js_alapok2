@@ -11,11 +11,20 @@
 </head>
 <body>
 
-<div class="p-3 mb-2 bg-dark text-white" id="div">
+<div class="p-3 mb-2 bg-dark" id="div">
 
 <h1>Mire képes a JavaScript?</h1>
-<div class="div2 p-3 mb-2 bg-dark text-white">
-<h5 id="valtoztat">Meg tudja változtani egyes elemek kinézetét.</h5>
+
+<div class="div2 p-3 mb-2 bg-dark" class="div3">
+    <h5>Elemeket jeleníthet meg.</h5>
+    <button type="button" class="btn btn-primary"
+    onclick="document.getElementById('ido').innerHTML = Date()">
+    Kattints az idő és dátum megjelenítéséhez!</button>
+    <p id="ido"></p>
+</div>
+
+<div class="div2 p-3 mb-2 bg-dark" class="div3">
+<h5 id="valtoztat">Meg tudja változtani egyes elemek kinézetét...</h5>
 <button type="button" onclick="document.getElementById('valtoztat').style.fontSize='35px'" class="btn btn-primary">Betűméret</button>
 <button type="button" onclick="document.getElementById('valtoztat').style.backgroundColor='orange'" class="btn btn-primary">Cím háttér</button>
 <button type="button" onclick="document.getElementById('valtoztat').style.fontFamily='Courier New'" class="btn btn-primary">Betűtípus</button>
@@ -24,23 +33,56 @@
 
 <hr>
 
-<div class="div2 p-3 mb-2 bg-dark text-white">
-<h5>Elemeket jeleníthet meg.</h5>
-<button type="button" class="btn btn-primary"
-onclick="document.getElementById('ido').innerHTML = Date()">
-Kattints az idő és dátum megjelenítéséhez!</button>
-<p id="ido"></p>
+<div class="div2 p-3 mb-2 bg-dark" class="div3">
+    <h5>...vagy akár az egész oldal külsejét.</h5>
+<button type="button" class="btn btn-primary" onclick="darkmode()">Sötét mód ki/be</button>
+
+<script>
+function darkmode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
+</script>
 </div>
 
 <hr>
 
-<div class="div2 p-3 mb-2 bg-dark text-white">
-<h5>Meg tudja változtatni egyes attribútumok értékét.</h5>
-<p>Ebben a példában egy kép forrását fogja megváltoztatni (Így változtatva a képet is, értelemszerűen.)</p>
-<button type="button" class="btn btn-primary btn-sm" onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Világítás be!</button>
+<div class="div2 p-3 mb-2 bg-dark" id="div4">
+<h5>Valamint egyes attribútumok értékét.</h5>
+<h6>(Sötétben ajánlott!)</h6>
+<button type="button" class="btn btn-primary btn-sm" onclick="document.getElementById('myImage').src='pic_bulbon.gif'; vilagitas();">Világítás be!</button>
 <img id="myImage" src="pic_bulboff.gif" style="width:100px">
-<button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Világítás ki!</button>
+<button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('myImage').src='pic_bulboff.gif'; vilagitas();">Világítás ki!</button>
+
+<script>
+    function vilagitas() {
+        var element = document.div4;
+        element.classList.toggle("vilagitas");
+      }
+</script>
 </div>
 
+<hr>
+
+<div class="div2 p-3 mb-2 bg-dark">
+<div><form>
+    <h6>Kinyomtathatjuk vele az adott weboldalt.</h6>
+    <input type="button" class="btn btn-primary btn-sm"value="Oldal nyomtatása" onClick="window.print()">
+    </form></div>
+</div>
+
+<hr>
+
+<div class="div2 p-3 mb-2 bg-dark" class="div3">
+    <h5>Figyelmeztető ablakokat dobhat fel.</h5>
+    <div class="d-grid gap-2">
+    <button type="button" class="btn btn-primary" onclick="myFunction()">Oldal készítője</button>
+    </div>
+    <script>
+        function myFunction() {
+            alert("Szarka Dániel, 113C");
+        }
+    </script>
+</div>
 </body>
 </html>
