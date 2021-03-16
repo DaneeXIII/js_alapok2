@@ -9,28 +9,28 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.png" type="image/png">
 </head>
-<body>
+<body id="a">
 
-    <div class="navbar">
+    <div class="navbar" id="a">
         <a href="">Változtass!!!</a>
         <button onclick="adathbe()">Adathasználat csökkentő be</button>
         <button onclick="adathki()">Adathasználat csökkentő ki</button>
+        <button type="button" onclick="document.getElementById('a').style.fontSize='40px'">Olvasó mód be</button>
+        <button type="button" onclick="document.getElementById('a').style.fontSize='20px'">Olvasó mód ki</button>
         <a href="javascript:kedvenc();">Kedvenc funkció</a>
+
       </div>
       
       <div class="main">
-        <p>Some text some text some text some text..</p>
+        <p></p>
       </div>
 
-        <button type="button" onclick="document.getElementById('a').style.fontSize='40px'">Olvasó mód be</button>
-        <button type="button" onclick="document.getElementById('a').style.fontSize='20px'">Olvasó mód ki</button>
       <script>
         function adathbe() {
           document.getElementById("myImage").style.visibility = "hidden";
           document.getElementById("kngs").style.visibility = "hidden";
           
         }
-          
         function adathki() {
           document.getElementById("myImage").style.visibility="visible";
           document.getElementById("kngs").style.visibility="visible";
@@ -71,11 +71,11 @@ Kattints az idő és dátum megjelenítéséhez!</button>
 <h5>Meg tudja változtatni egyes attribútumok értékét.</h5>
 <p>Ebben a példában egy kép forrását fogja megváltoztatni (Így változtatva a képet is, értelemszerűen.)</p>
 <button type="button" class="btn btn-primary btn-sm" onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Világítás be!</button>
-<img id="myImage" src="pic_bulboff.gif" style="width:100px" alt="Villanykörte">
+<img id="myImage" src="pic_bulboff.gif" style="width:100px" alt="Lekapcsolt villanykörte">
 <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Világítás ki!</button>
 </div>
 
-<img src="kngz.jpg" id="kngs" alt="Egypertizenháromcé egy része">
+<img src="kngz.jpg" id="kngs">
 
 </body>
 </html>
